@@ -26,17 +26,39 @@ function askUser() {
         choices: ["view all roles", "view all employees", "view all departments", "add a department", "add a role", "add an employee", "update an employee role"]
 
     }]).then(response => {
-        if (response.answer == "view all roles") {
-            viewRole();
+        switch (response) {
+            case x:
+                if (response.answer == "view all roles") {
+                    viewRole();
+                }
+                // code block
+                break;
+            case y:
+                if (response.answer == "view all employees") {
+                    viewEmployees();
+                }
+                // code block
+                break;
+            case z:
+                if (response.answer == "view all departments") {
+                    viewDept();
+                }
+                // code block
+
+
+
+
         }
+
     })
+
 
 
 }
 
 function viewRole() {
     //viewRole() //: get every role that exists
-    var sql1 = SELECT * FROM role
+    var sql1 = "SELECT * FROM (role)"
     db.query(sql, (err, rows) => {
         if (err) throw err;
 
@@ -45,8 +67,8 @@ function viewRole() {
     })
 }
 
-function viewEmployee() {
-    var sql2 = SELECT * FROM employees
+function viewEmployees() {
+    var sql2 = "SELECT * FROM (employees)"
     db.query(sql, (err, rows) => {
         if (err) throw err;
 
@@ -56,7 +78,7 @@ function viewEmployee() {
 }
 
 function viewDept() {
-    var sql3 = SELECT * FROM department
+    var sql3 = "SELECT * FROM(department)"
     db.query(sql, (err, rows) => {
         if (err) throw err;
 
