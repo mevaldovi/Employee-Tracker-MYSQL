@@ -1,6 +1,7 @@
 const mysql = require("mysql2");
 const inquirer = require("inquirer");
 const consoletable = require("console.table");
+const { lstat } = require("fs");
 
 const db = mysql.createConnection({
         host: 'localhost',
@@ -27,21 +28,26 @@ function askUser() {
 
     }]).then(response => {
         switch (response) {
-            case x:
+            case a:
                 if (response.answer == "view all roles") {
                     viewRole();
                 }
                 // code block
                 break;
-            case y:
+            case b:
                 if (response.answer == "view all employees") {
                     viewEmployees();
                 }
                 // code block
                 break;
-            case z:
+            case c:
                 if (response.answer == "view all departments") {
                     viewDept();
+                }
+                break;
+            case d:
+                if (response.answer == "add a department") {
+                    addDept();
                 }
                 // code block
 
@@ -88,5 +94,14 @@ function viewDept() {
     })
 }
 
-function addDept() {}
+function addDept() {
+    var sql4 = "SELECT * FROM department INSERT INTO department (name) VALUES"
+    db.query(sql, (err, rows) => {
+        if (err) throw err;
+
+        console.table(rows)
+        askUser();
+    })
+
+}
 // var sql4 = INSERT_VALUES}
