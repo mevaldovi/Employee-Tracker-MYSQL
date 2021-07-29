@@ -104,4 +104,3 @@ function addDept() {
     })
 
 }
-// var sql4 = INSERT_VALUES}
