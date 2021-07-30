@@ -1,143 +1,157 @@
 const mysql = require("mysql2");
 const inquirer = require("inquirer");
 const consoletable = require("console.table");
+
 // const fs = require("fs");
 
 const db = mysql.createConnection({
-        host: 'localhost',
+        host: "localhost",
         // MySQL username,
-        user: 'root',
+        user: "root",
         // MySQL password
-        password: '82Q57A94',
-        database: 'employees_db'
-    },
+        password: "82Q57A94",
+        database: "employees_db",
+    }
     // console.log(`Connected to the classlist_db database.`)
 );
 //connect mysql and run askUser();
 db.connect((err) => {
-        if (err) throw err
-        askUser();
-    })
-    //run inquirer
+    if (err) throw err;
+    askUser();
+});
+//run inquirer
 function askUser() {
-    inquirer.prompt([{
-        type: "list",
-        name: "answer",
-        message: "What would you like to do?",
-        choices: ["view all roles", "view all employees", "view all departments", "add a department", "add a role", "add an employee", "update an employee role", "nothing else"]
+    inquirer
+        .prompt([{
+            type: "list",
+            name: "answer",
+            message: "What would you like to do?",
+            choices: [
+                "view all roles",
+                "view all employees",
+                "view all departments",
+                "add a department",
+                "add a role",
+                "add an employee",
+                "update an employee role",
+                "nothing else",
+            ],
             //promise statement: send rsponse according to what the user does
-    }]).then(response => {
-        switch (response.answer) {
-            case "view all roles":
-                viewRole();
-                break;
-            case "view all employees":
-                viewEmployees();
+        }, ])
+        .then((response) => {
+            switch (response.answer) {
+                case "view all roles":
+                    viewRole();
+                    break;
+                case "view all employees":
+                    viewEmployees();
 
-                // code block
-                break;
-            case "view all departments":
-                viewDept();
-                break;
-            case "add a department":
-                addDept();
-                break;
-            case "add a role":
-                addRole();
-                break;
-            case "add an employee":
-                addEmployee();
-                break;
-            case "update an employee":
-                updateEmployee();
-                break;
-            case "nothing else":
-                console.log(" thanks!")
+                    // code block
+                    break;
+                case "view all departments":
+                    viewDept();
+                    break;
+                case "add a department":
+                    addDept();
+                    break;
+                case "add a role":
+                    addRole();
+                    break;
+                case "add an employee":
+                    addEmployee();
+                    break;
+                case "update an employee":
+                    updateEmployee();
+                    break;
+                case "nothing else":
+                    console.log(" thanks!");
                     //call the function here to display complete table
-                break;
-                // code block
-        }
-
-    })
-
+                    break;
+                    // code block
+            }
+        });
 }
 
 function viewRole() {
     //viewRole() //: get every role that exists
-    var sql1 = "SELECT * FROM (role)"
+    var sql1 = "SELECT * FROM (role)";
     db.query(sql1, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
-        console.table(rows)
+        console.table(rows);
         askUser();
-    })
+    });
 }
 
 function viewEmployees() {
-    var sql2 = "SELECT * FROM (employee)"
-        //viewEmployees() = view complete list of every employee
+    var sql2 = "SELECT * FROM (employee)";
+    //viewEmployees() = view complete list of every employee
     db.query(sql2, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
-        console.table(rows)
+        console.table(rows);
         askUser();
-    })
+    });
 }
 
 function viewDept() {
     //viewDept: view all departments that exist
-    var sql3 = "SELECT * FROM(department)"
+    var sql3 = "SELECT * FROM(department)";
     db.query(sql3, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
-        console.table(rows)
+        console.table(rows);
         askUser();
-
-    })
+    });
 }
 
 function addDept() {
     //addDept(): add a department
-    var sql4 = `INSERT INTO department(department_name) VALUES (${department.name})`
+    let dept = rows.input; //how do they expect me to define somethings that is already defined in js library??
+    const sql4 = `INSERT INTO department(department_name) VALUES (${dept})`;
     db.query(sql4, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
-        console.table(rows)
+        console.table(rows);
         askUser();
-    })
+    });
 }
 
 function addRole() {
     //addRole(): add a role for a certain employee
-    var sql5 = "SELECT * FROM role INSERT INTO role (name) VALUES"
+    let role = rows.input;
+    var sql5 = `SELECT * FROM role INSERT INTO role (name) VALUES (${role})`;
     db.query(sql5, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
-        console.table(rows)
+        console.table(rows);
         askUser();
-    })
+    });
 }
 
 function addEmployee() {
     //add a new employee to table
-    var sql6 = "SELECT * FROM employee INSERT INTO employee (name) VALUES"
+    let newEmployee = rows.input;
+    var sql6 = `SELECT * FROM employee INSERT INTO employee (name) VALUES (${newEmployee})`;
     db.query(sql6, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
-        console.table(rows)
+        console.table(rows);
         askUser();
-    })
+    });
 }
 
 function updateEmployee() {
     //update a current employees information
-    var sql7 = "SELECT (employee id, lastname, firstname, salary, role, department, manager) FROM employees_db SET (name) VALUES WHERE id = NOT NULL"
+    let updateEmployee = rows.input;
+    var sql7 = `SELECT(employee id, lastname, firstname, salary, role, department, manager) FROM employees_db SET(name) VALUES WHERE (${updateEmployee})`;
     db.query(sql7, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
-        console.table(rows)
+        console.table(rows);
         askUser();
-    })
+    });
 }
+
 
 //declare function here to display entire table when user opts to finish updates
