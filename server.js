@@ -74,7 +74,7 @@ function viewRole() {
 }
 
 function viewEmployees() {
-    var sql2 = "SELECT * FROM (employees)"
+    var sql2 = "SELECT * FROM (employee)"
         //viewEmployees() = view complete list of every employee
     db.query(sql2, (err, rows) => {
         if (err) throw err;
@@ -98,7 +98,7 @@ function viewDept() {
 
 function addDept() {
     //addDept(): add a department
-    var sql4 = "SELECT * FROM department INSERT INTO department (name) VALUES"
+    var sql4 = `INSERT INTO department(department_name) VALUES (${department.name})`
     db.query(sql4, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
