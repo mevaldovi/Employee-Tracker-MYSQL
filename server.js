@@ -27,49 +27,33 @@ function askUser() {
         choices: ["view all roles", "view all employees", "view all departments", "add a department", "add a role", "add an employee", "update an employee role", "nothing else"]
             //promise statement: send rsponse according to what the user does
     }]).then(response => {
-        switch (response) {
-            case a:
-                if (response.answer == "view all roles") {
-                    viewRole();
-                }
+        switch (response.answer) {
+            case "view all roles":
+                viewRole();
+                break;
+            case "view all employees":
+                viewEmployees();
+
                 // code block
                 break;
-            case b:
-                if (response.answer == "view all employees") {
-                    viewEmployees();
-                }
-                // code block
+            case "view all departments":
+                viewDept();
                 break;
-            case c:
-                if (response.answer == "view all departments") {
-                    viewDept();
-                }
+            case "add a department":
+                addDept();
                 break;
-            case d:
-                if (response.answer == "add a department") {
-                    addDept();
-                }
+            case "add a role":
+                addRole();
                 break;
-            case e:
-                if (response.answer == "add a role") {
-                    addRole();
-                }
+            case "add an employee":
+                addEmployee();
                 break;
-            case f:
-                if (response.answer == "add an employee") {
-                    addEmployee();
-                }
+            case "update an employee":
+                updateEmployee();
                 break;
-            case g:
-                if (response.answer == "update an employee") {
-                    updateEmployee();
-                }
-                break;
-            case h:
-                if (response == "nothing else") {
-                    console.log("k thanks bye!")
-                    return;
-                }
+            case "nothing else":
+                console.log(" thanks!")
+                    //call the function here to display complete table
                 break;
                 // code block
         }
@@ -155,3 +139,5 @@ function updateEmployee() {
         askUser();
     })
 }
+
+//declare function here to display entire table when user opts to finish updates
