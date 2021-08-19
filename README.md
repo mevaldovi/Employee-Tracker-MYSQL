@@ -1,10 +1,10 @@
 # Homework11_EmployeeTrackerMYSQL
 
 ## Description
-Further streamlining my current professional portfolio.
+A back-end focused application to track employees in a company database, entirely through a server.
 
 ## Technology 
-HTML, CSS, JavaScript, NodeJS, Express, Git, and npm packages "inquirer" and "console.table" as well as "mysql2".
+HTML, CSS, JavaScript, NodeJS, Express, Git, mySQL, and npm packages "inquirer" and "console.table" as well as "mysql2".
 
 # Table of Contents
 [Description](https://github.com/mevaldovi/Homework11_EmployeeTrackerMYSQL#Description)
@@ -35,4 +35,5 @@ None at this time.
 # Contact
 Shoot me an email:[mevaldovi@gmail.com](mailto:mevaldovi@gmail.com)
 # Agknowledgments
+Special thanks to Andrew Hardemon for giving me helpful pointers in the right direction.
 "Last, but not least, I would like to thank me. I want to thank me for believing in me, I want to thank me for doing all this hard work. I wanna thank me for having no days off. I wanna thank me for never quitting. I wanna thank me for always been a giver and trying to give more than I receive. I want to thank me for trying to do more right than wrong. I want to thank me for just being me at all times.” --Snoop Dog
