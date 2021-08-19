@@ -107,8 +107,9 @@ function viewDept() {
 
 function addDept() {
     //addDept(): add a department
-    let dept = rows.input; //how do they expect me to define somethings that is already defined in js library??
+    let dept = rows.input;
     const sql4 = `INSERT INTO department(department_name) VALUES (${dept})`;
+    //how do they expect me to define somethings that is already defined in js library??
     db.query(sql4, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
@@ -120,7 +121,7 @@ function addDept() {
 function addRole() {
     //addRole(): add a role for a certain employee
     let role = rows.input;
-    var sql5 = `SELECT * FROM role INSERT INTO role (name) VALUES (${role})`;
+    const sql5 = `SELECT * FROM role INSERT INTO role (name) VALUES (${role})`;
     db.query(sql5, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
@@ -132,7 +133,7 @@ function addRole() {
 function addEmployee() {
     //add a new employee to table
     let newEmployee = rows.input;
-    var sql6 = `SELECT * FROM employee INSERT INTO employee (name) VALUES (${newEmployee})`;
+    const sql6 = `SELECT * FROM employee INSERT INTO employee (name) VALUES (${newEmployee})`;
     db.query(sql6, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
@@ -143,8 +144,8 @@ function addEmployee() {
 
 function updateEmployee() {
     //update a current employees information
+    const sql7 = `SELECT(employee id, lastname, firstname, salary, role, department, manager) FROM employees_db SET(name) VALUES WHERE (${updateEmployee})`;
     let updateEmployee = rows.input;
-    var sql7 = `SELECT(employee id, lastname, firstname, salary, role, department, manager) FROM employees_db SET(name) VALUES WHERE (${updateEmployee})`;
     db.query(sql7, (err, rows) => {
         if (err) throw err;
         //run console.table rows in the terminal and revert to run askUser() function for users next option
