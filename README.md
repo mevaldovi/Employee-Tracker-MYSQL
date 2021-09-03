@@ -26,13 +26,15 @@ HTML, CSS, JavaScript, NodeJS, Express, Git, mySQL, and npm packages "inquirer" 
 [Agnowledgments](https://github.com/mevaldovi/Homework11_EmployeeTrackerMYSQL#Agknowledgments)
 
 # Installation
-[Video](video walkthrough link goes here). 
+[Video demo.](video walkthrough link goes here). 
 If the link does not work, you can just clone down this repo, right click on the html file and select "open in default browser". 
 # Usage
 Simply open the link in the "Installation" tab above which should take you straight to the walk-through video. Happy watching! 
 # License
 None at this time.
 # Contact
+[Github](https://github.com/mevaldovi/)
+
 Shoot me an email:[mevaldovi@gmail.com](mailto:mevaldovi@gmail.com)
 # Agknowledgments
 Special thanks to Andrew Hardemon for giving me helpful pointers in the right direction.

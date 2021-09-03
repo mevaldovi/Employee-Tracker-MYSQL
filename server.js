@@ -1,6 +1,12 @@
+const express = require('express');
 const mysql = require("mysql2");
 const inquirer = require("inquirer");
+const PORT = process.env.PORT || 3000;
+const app = express();
 const consoletable = require("console.table");
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // const fs = require("fs");
 
@@ -11,16 +17,16 @@ const db = mysql.createConnection({
         // MySQL password
         password: "82Q57A94",
         database: "employees_db",
-    }
-    // console.log(`Connected to the classlist_db database.`)
+    },
+    console.log(`Connected to the classlist_db database.`)
 );
 //connect mysql and run askUser();
-db.connect((err) => {
-    if (err) throw err;
-    askUser();
-});
+// db.connect((err) => {
+//     if (err) throw err;
+//     askUser();
+// });
 //run inquirer
-function askUser() {
+const askUser = () => {
     inquirer
         .prompt([{
             type: "list",
@@ -34,11 +40,12 @@ function askUser() {
                 "add a role",
                 "add an employee",
                 "update an employee role",
-                "nothing else",
-            ],
+                "nothing else"
+            ]
             //promise statement: send rsponse according to what the user does
-        }, ])
+        }])
         .then((response) => {
+            console.log(response);
             switch (response.answer) {
                 case "view all roles":
                     viewRole();
@@ -156,3 +163,7 @@ function updateEmployee() {
 
 
 //declare function here to display entire table when user opts to finish updates
+askUser();
+app.listen(PORT, () => {
+    console.log(`server is running on port ${PORT}`)
+})
