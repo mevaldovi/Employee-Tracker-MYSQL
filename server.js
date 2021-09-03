@@ -87,6 +87,7 @@ function viewRole() {
         //run console.table rows in the terminal and revert to run askUser() function for users next option
         console.table(rows);
         askUser();
+        return rows;
     });
 }
 
@@ -98,6 +99,7 @@ function viewEmployees() {
         //run console.table rows in the terminal and revert to run askUser() function for users next option
         console.table(rows);
         askUser();
+        return rows;
     });
 }
 
@@ -109,6 +111,7 @@ function viewDept() {
         //run console.table rows in the terminal and revert to run askUser() function for users next option
         console.table(rows);
         askUser();
+        return rows;
     });
 }
 
@@ -122,6 +125,7 @@ function addDept() {
         //run console.table rows in the terminal and revert to run askUser() function for users next option
         console.table(rows);
         askUser();
+        return rows;
     });
 }
 
@@ -134,6 +138,7 @@ function addRole() {
         //run console.table rows in the terminal and revert to run askUser() function for users next option
         console.table(rows);
         askUser();
+        return rows;
     });
 }
 
@@ -146,6 +151,7 @@ function addEmployee() {
         //run console.table rows in the terminal and revert to run askUser() function for users next option
         console.table(rows);
         askUser();
+        return rows;
     });
 }
 
@@ -158,6 +164,7 @@ function updateEmployee() {
         //run console.table rows in the terminal and revert to run askUser() function for users next option
         console.table(rows);
         askUser();
+        return rows;
     });
 }
 
