@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS employees_db;
-CREATE DATABASE employees_db;
-USE employees_db;
+DROP DATABASE IF EXISTS employeelist_db;
+CREATE DATABASE employeelist_db;
+USE employeelist_db;
 
 CREATE TABLE department (
     id INT AUTO_INCREMENT NOT NULL,
