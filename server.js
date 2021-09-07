@@ -70,10 +70,10 @@ const askUser = () => {
         case "add an employee":
           addEmployee();
           break;
-        case "update an employee":
-            updateEmployee();
-            break;
-        case "nothing else":
+        case "update an employee role":
+          updateEmployee();
+          break;
+        default:
           console.log(" thanks!");
           process.exit();
       }
@@ -182,7 +182,7 @@ async function addDept() {
         message: "what is the name of the department you wish to add?",
       },
     ]);
-    await db.promise().query("INSERT INTO department SET ?", response)
+    await db.promise().query("INSERT INTO department SET ?", response);
     console.log("added a department!");
     askUser();
   } catch (err) {
@@ -221,7 +221,37 @@ async function addRole() {
   }
 }
 
-// async function updateEmpl
+async function updateEmployee() {
+  try {
+    const roles = await db
+      .promise()
+      .query("SELECT id AS value, title AS name FROM role");
+    const roleChoices = roles[0];
+    const employees = await db
+    .promise()
+    .query(
+      "SELECT id AS value, CONCAT(first_name,' ', last_name) AS name FROM employee"
+    );
+    const employeeChoices = employees[0];
+    const response = await inquirer.prompt([
+        {
+            type: "list",
+            name: "employee_id",
+            message: "What is the employee you wish to update?",
+            choices: employeeChoices
+        },
+        {
+            type: "list",
+            name: "role",
+            message: "What is the employee's new role?",
+            choices: roleChoices
+        }
+    ])
+    await db.promise().query("UPDATE employee SET role_id = ? WHERE id = ?", [response.role, response.employee_id])
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 const convertMgrToId = (mgr) => {
   return new Promise(function (resolve, reject) {
