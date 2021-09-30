@@ -29,7 +29,7 @@ HTML, CSS, JavaScript, NodeJS, Express, Git, mySQL, and npm packages "inquirer" 
 [Agnowledgments](https://github.com/mevaldovi/Homework11_EmployeeTrackerMYSQL#Agknowledgments)
 
 # Installation
-[Video demo.](https://drive.google.com/file/d/1ETqLcGfo25ZLanM3ddCjN2Xzvq5llK28/view). 
+[Video demo](https://drive.google.com/file/d/1ETqLcGfo25ZLanM3ddCjN2Xzvq5llK28/view). 
 If the link does not work, you can just clone down this repo, right click on the server.js file in your code editor, and in the integrated terminal type "node server.js" to begin the application.
 # Usage
 Simply open the link in the "Installation" tab above which should take you straight to the walk-through video. Happy watching! 
