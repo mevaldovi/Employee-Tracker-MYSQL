@@ -1,5 +1,8 @@
 # Homework11_EmployeeTrackerMYSQL
 
+<img width="650" alt="Nodejs-Employee-Tracker" src="https://user-images.githubusercontent.com/83307023/135496098-7fcd4d0b-2fed-4ded-9f84-ebfbaa56e27e.PNG">
+
+
 ## Description
 A back-end focused application to track employees in a company database, entirely through a server.
 
