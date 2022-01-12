@@ -1,6 +1,6 @@
 # Homework11_EmployeeTrackerMYSQL
 
-[Video demo](https://drive.google.com/file/d/1ETqLcGfo25ZLanM3ddCjN2Xzvq5llK28/view)
+Video demo: [https://drive.google.com/file/d/1ETqLcGfo25ZLanM3ddCjN2Xzvq5llK28/view](https://drive.google.com/file/d/1ETqLcGfo25ZLanM3ddCjN2Xzvq5llK28/view)
 
 <img width="650" alt="Nodejs-Employee-Tracker" src="https://user-images.githubusercontent.com/83307023/135496098-7fcd4d0b-2fed-4ded-9f84-ebfbaa56e27e.PNG">
 
@@ -32,15 +32,20 @@ HTML, CSS, JavaScript, NodeJS, Express, Git, mySQL, and npm packages "inquirer" 
 
 # Installation
  
-If the video demo link does not work, you can just clone down this repo, right click on the server.js file in your code editor, and in the integrated terminal type "node server.js" to begin the application.
+- Clone down this repo
+
+- npm install
+
+- node server.js 
+
 # Usage
 Simply open the link in the "Installation" tab above which should take you straight to the walk-through video. Happy watching! 
 # License
 None at this time.
 # Contact
-[Github](https://github.com/mevaldovi/)
+Github: [https://github.com/mevaldovi](https://github.com/mevaldovi)
 
-Shoot me an email:[mevaldovi@gmail.com](mailto:mevaldovi@gmail.com)
+Shoot me an email: [mevaldovi@gmail.com](mailto:mevaldovi@gmail.com)
 # Agknowledgments
 Special thanks to Andrew Hardemon for giving me helpful pointers in the right direction and to [Jessamyn McTwigan](https://github.com/jessamyn27) for allowing me to use her javascript code for improved functionality.
 
