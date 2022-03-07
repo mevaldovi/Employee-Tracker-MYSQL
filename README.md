@@ -31,12 +31,16 @@ HTML, CSS, JavaScript, NodeJS, Express, Git, mySQL, and npm packages "inquirer" 
 [Agnowledgments](https://github.com/mevaldovi/Homework11_EmployeeTrackerMYSQL#Agknowledgments)
 
 # Installation
+
+Bold text indicates commands in the terminal; italicized text indicates steps to take
  
-- Clone down this repo
+- _Clone down this repo_
 
-- npm install
+- **npm install**
 
-- node server.js 
+- **node server.js**
+
+- _Respond to prompts_
 
 # Usage
 Simply open the link in the "Installation" tab above which should take you straight to the walk-through video. Happy watching! 
