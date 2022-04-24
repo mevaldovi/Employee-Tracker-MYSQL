@@ -36,9 +36,11 @@ Bold text indicates commands in the terminal; italicized text indicates steps to
  
 - _Clone down this repo_
 
-- **npm install**
+- `npm install`
 
-- **node server.js**
+- _right click on server.js & open in integrated terminal
+
+- `node server.js`
 
 - _Respond to prompts_
 
@@ -49,7 +51,10 @@ None at this time.
 # Contact
 Github: [https://github.com/mevaldovi](https://github.com/mevaldovi)
 
-Shoot me an email: [mevaldovi@gmail.com](mailto:mevaldovi@gmail.com)
+LinkedIn : [https://www.linkedin.com/in/marie-valdovinos-a616b21b1](https://www.linkedin.com/in/marie-valdovinos-a616b21b1)
+
+
+Shoot me an email:[mevaldovi@gmail.com](mailto:mevaldovi@gmail.com)
 # Agknowledgments
 Special thanks to Andrew Hardemon for giving me helpful pointers in the right direction and to [Jessamyn McTwigan](https://github.com/jessamyn27) for allowing me to use her javascript code for improved functionality.
 
