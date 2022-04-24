@@ -38,7 +38,7 @@ Bold text indicates commands in the terminal; italicized text indicates steps to
 
 - `npm install`
 
-- _right click on server.js & open in integrated terminal
+- _right click on server.js & open in integrated terminal_
 
 - `node server.js`
 
