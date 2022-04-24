@@ -31,8 +31,6 @@ HTML, CSS, JavaScript, NodeJS, Express, Git, mySQL, and npm packages "inquirer" 
 [Agnowledgments](https://github.com/mevaldovi/Homework11_EmployeeTrackerMYSQL#Agknowledgments)
 
 # Installation
-
-Bold text indicates commands in the terminal; italicized text indicates steps to take
  
 - _Clone down this repo_
 
